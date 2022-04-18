@@ -290,6 +290,7 @@ function sanPhamTimKiem(product){
 
     return html;
 }
+console.log("đã sửa")
 function close() {
     $(".container-result-search").classList.remove("open")
     
