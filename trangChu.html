@@ -750,11 +750,11 @@ function objectToHTML(sanPham) {
     html += '</div>'
     return html;
 }
-        var jsonListProduct = localStorage.getItem('product')
-        var listProducts = createProducts().fromJSONs(jsonListProduct)
-        console.log(listProducts);
+//         var jsonListProduct = localStorage.getItem('product')
+//         var listProducts = createProducts().fromJSONs(jsonListProduct)
+//         console.log(listProducts);
         // 2. change object to HTML
-        var HTML = productToHTML(listProducts);
+        var HTML = productToHTML(listProduct);
 
         //3. set HTML to section product
         var nodeProduct = document.getElementById("product");
