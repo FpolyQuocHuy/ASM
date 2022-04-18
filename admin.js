@@ -198,7 +198,7 @@ function onClickEdit(idProduct) {
             alert("Vui lòng nhập đầy đủ thông tin")
         }else {
          var newProduct = createProducts(imageEdit, saleEdit, nameEdit, priceEdit, null);
-
+        alert("Thay đổi thông tin sản phẩm thành công")
          for (let i = 0; i < current.length; i++) {
              var product = current[i];
              if (idProduct === product.id) {
