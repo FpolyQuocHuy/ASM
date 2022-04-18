@@ -133,7 +133,6 @@ $("#form").addEventListener('submit', (e) => {
 //     console.log(listProducts);
     // 2. change object to HTML
     var HTML = productToHTML(listProduct);
-    
     //3. set HTML to section product
     var nodeProduct = $("#product");
     
