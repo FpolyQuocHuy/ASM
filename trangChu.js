@@ -38,19 +38,19 @@ class storeUser {
         }
     }
 
-    // login(user , password){
-    //     var user = [];
-    //     var currentUser = this.User;
-    //     console.log(currentUser);
-    //     for(let i = 0; i < currentUser.length; i++){
-    //         const list = currentUser[i];
-    //         if( list.user === user && list.password === password){
-    //             user = this.User[i];
+    login(user , password){
+        var user = [];
+        var currentUser = this.User;
+        console.log(currentUser);
+        for(let i = 0; i < currentUser.length; i++){
+            const list = currentUser[i];
+            if( list.user === user && list.password === password){
+                user = this.User[i];
                
-    //        }
-    //     }
-    //     return user;
-    // }
+           }
+        }
+        return user;
+    }
     listUser(){
         return this.User;
     }
@@ -77,19 +77,19 @@ class storeUser {
     }
 }
 
-function login(user , password){
-   var userLoginTemp =  localStorage.getItem('User')
-    var userLogin = JSON.parse(userLoginTemp)
-    var flag = false;
-    for(let i = 0; i < userLogin.length;i++){
-        var current = userLogin[i];
-        if(current.user === user && current.password === password ){
-            flag = true;
-            // Window.location ='./admin.html'
-        }
-    }
-    return flag;
-}
+// function login(user , password){
+//    var userLoginTemp =  localStorage.getItem('User')
+//     var userLogin = JSON.parse(userLoginTemp)
+//     var flag = false;
+//     for(let i = 0; i < userLogin.length;i++){
+//         var current = userLogin[i];
+//         if(current.user === user && current.password === password ){
+//             flag = true;
+//             // Window.location ='./admin.html'
+//         }
+//     }
+//     return flag;
+// }
 
 const store = new storeUser();
 store.getData();
@@ -141,7 +141,7 @@ $(".container-login").addEventListener('submit' , (e) =>{
     }
     else {
 
-        const isLogin = login(users , passwords);
+        const isLogin = store.login(users , passwords);
        console.log(isLogin);
         
         if(isLogin){
