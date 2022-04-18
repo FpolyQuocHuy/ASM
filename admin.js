@@ -128,9 +128,9 @@ $("#form").addEventListener('submit', (e) => {
 
 
     //1. get Product from localStorage
-    var jsonListProduct = localStorage.getItem('product')
-    var listProducts = createProducts().fromJSONs(jsonListProduct)
-    console.log(listProducts);
+//     var jsonListProduct = localStorage.getItem('product')
+//     var listProducts = createProducts().fromJSONs(jsonListProduct)
+//     console.log(listProducts);
     // 2. change object to HTML
     var HTML = productToHTML(listProduct);
     
@@ -149,16 +149,16 @@ function onClickXoa(idProduct) {
     for (let i = 0; i < current.length; i++) {
         var product = current[i];
         if (idProduct === product.id) {
-            listProducts.splice(i, 1);
+            listProduct.splice(i, 1);
             alert("Đã xóa 1 sản phẩm")
-            console.log(listProducts);
+            console.log(listProduct);
             localStorage.removeItem('product')
         
-            var productJson = JSON.stringify(listProducts);
+            var productJson = JSON.stringify(listProduct);
         
             //lưu trữ danh sách sản phẩm xuống localStorage
             localStorage.setItem('product', productJson);
-            productToHTML(listProducts);
+            productToHTML(listProduct);
         }
     }
     //xóa local và lưu lại danh sách sản phẩm
