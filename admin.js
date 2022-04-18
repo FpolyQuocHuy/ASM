@@ -115,7 +115,7 @@ $("#form").addEventListener('submit', (e) => {
         alert("Vui lòng nhập đầy đủ thông tin")
     }else {
         alert("Đã thêm 1 sản phẩm")
-        var product = createProducts(image, sale, name, price, null)
+        var product = new createProducts(image, sale, name, price, null)
         //thêm sản phẩm vào danh sách sản phẩm
         listProduct.push(product)
         var productJson = JSON.stringify(listProduct);
