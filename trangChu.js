@@ -64,6 +64,7 @@ class storeUser {
         if(data){
             const converData = JSON.parse(data);
             const listUser = [];
+            console.log(converData);
             for(let i = 0; i < converData.length; i++){
                 const user = new User(converData[i].name,converData[i].user,converData[i].email,converData[i].password,converData[i].role);
                 listUser.push(user);
