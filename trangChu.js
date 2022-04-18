@@ -141,7 +141,7 @@ $(".container-login").addEventListener('submit' , (e) =>{
     }
     else {
 
-        const isLogin = store.login(users , passwords);
+        const isLogin = login(users , passwords);
        console.log(isLogin);
         
         if(isLogin){
